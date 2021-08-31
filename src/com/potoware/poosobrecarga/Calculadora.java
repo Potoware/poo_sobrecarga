@@ -2,27 +2,30 @@ package com.potoware.poosobrecarga;
 
 public class Calculadora {
 
-    public int sumar(int a, int b){
+    private Calculadora() {
+    }
+
+    public static int sumar(int a, int b){
         return a+b;
     }
 
-    public float sumar(float a, float b){
+    public static float sumar(float a, float b){
         return a+b;
     }
 
-    public float sumar(int i, float j){
+    public static float sumar(int i, float j){
         return  i + j;
     }
 
-    public float sumar(float i, int j){
+    public static float sumar(float i, int j){
         return  i + j;
     }
 
-    public double sumar(double a, double b){
+    public static double sumar(double a, double b){
         return a + b;
     }
 
-    public  int sumar(String a, String b){
+    public static int sumar(String a, String b){
         int resultado;
         try {
             return Integer.parseInt(a) + Integer.parseInt(b);
@@ -33,8 +36,25 @@ public class Calculadora {
         return  resultado;
     }
 
-    public  int sumar(int a, int b, int c){
+    public static int sumar(int a, int b, int c){
         return  a+b+c;
     }
+
+    public static int sumar(int...argumentos){
+        int total = 0;
+        for(int args: argumentos){
+        total+=args;
+        }
+        return total;
+    }
+
+    public static float sumar(int a,float...argumentos){
+        int total = 0;
+        for(float args: argumentos){
+            total+=args;
+        }
+        return total;
+    }
+
 
 }
